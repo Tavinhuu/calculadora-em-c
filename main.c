@@ -1,451 +1,117 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main (void) {
-  setlocale(LC_ALL,"Portuguese");
-    
+int main(void) {
+    setlocale(LC_ALL, "Portuguese");
 
+    float somat = 0.0, subtrac = 0.0, multiplicat = 1.0, dividirt = 1.0;
+    int tamanho, i, escolhaCalculo;
 
-  int escolhaCalculo = 5;
+    char logo[] =
+        "\n\n\n"
+        "          | |          | |         | |                     | |       | |            (_)      \n"
+        "  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n"
+        " / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n"
+        "| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\\ V /| | | | |\n"
+        " \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n"
+        "\n---------------------------------------------------------------------------------------------\n";
 
-  float A, B, somat, subtrat, multiplicat, dividirt;
+    printf("%s", logo);
+    printf("* Escolha a opção desejada\n\n");
+    printf("1 - Para realizar uma soma\n");
+    printf("2 - Para realizar uma subtração\n");
+    printf("3 - Para realizar uma multiplicação\n");
+    printf("4 - Para realizar uma divisão\n");
+    printf("0 - Para finalizar o uso da calculadora\n");
+    scanf("%d", &escolhaCalculo);
 
-  int escolhamenu;
+    if (escolhaCalculo == 1) {
+        printf("%s", logo);
+        printf("* Digite quantos valores estão presentes no seu cálculo\n");
+        scanf("%d", &tamanho);
 
-  while (escolhaCalculo == 5)
-	{
-	  printf ("\n\n\n");
-	  printf
-		("          | |          | |         | |                     | |       | |            (_)      \n");
-	  printf
-		("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-	  printf
-		(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-	  printf
-		("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-	  printf
-		(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-	  printf
-		("\n---------------------------------------------------------------------------------------------\n");
-	  printf ("* Escolha a opção desejada\n\n");
-	  printf ("1 - Para realizar uma soma\n");
-	  printf ("2 - Para realizar uma subtração\n");
-	  printf ("3 - Para realizar uma multiplicação\n");
-	  printf ("4 - Para realizar uma divisão\n");
-	  printf ("0 - Para finalizar o uso da calculadora\n");
-	  scanf ("%d", &escolhaCalculo);
+        float valores_soma[tamanho];
 
-	  switch (escolhaCalculo)
-	  
-		{
-		    
-		    //soma
-		    
-		    
-		case 1:
-		
-		
-		
-		    // valor 1 da soma
-		
-		
-		
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o primeiro valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &A);
-		  
-		  
-		  
-		  //valor 2 da soma
-		  
-		  
-		  
-		  
-		  
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o segundo valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &B);
+        for (i = 0; i < tamanho; i++) {
+            printf("%s", logo);
+            printf("* Digite o %dº valor do cálculo\n", i + 1);
+            scanf("%f", &valores_soma[i]);
+            somat += valores_soma[i];
+        }
 
-		  somat = A + B;
+        printf("%s", logo);
+        printf("O resultado da soma é: %.1f\n", somat);
+    }
+    else if (escolhaCalculo == 2) {
+        printf("%s", logo);
+        printf("* Digite quantos valores estão presentes no seu cálculo\n");
+        scanf("%d", &tamanho);
 
+        float valores_subtracao[tamanho];
 
+        for (i = 0; i < tamanho; i++) {
+            printf("%s", logo);
+            printf("* Digite o %dº valor do cálculo\n", i + 1);
+            scanf("%f", &valores_subtracao[i]);
+            if (i == 0) {
+                subtrac = valores_subtracao[i];
+            } else {
+                subtrac -= valores_subtracao[i];
+            }
+        }
 
-        //resultado da soma
+        printf("%s", logo);
+        printf("O resultado da subtração é: %.1f\n", subtrac);
+    }
+    else if (escolhaCalculo == 3) {
+        printf("%s", logo);
+        printf("* Digite quantos valores estão presentes no seu cálculo\n");
+        scanf("%d", &tamanho);
 
+        float valores_multiplicacao[tamanho];
 
+        for (i = 0; i < tamanho; i++) {
+            printf("%s", logo);
+            printf("* Digite o %dº valor do cálculo\n", i + 1);
+            scanf("%f", &valores_multiplicacao[i]);
+            multiplicat *= valores_multiplicacao[i];
+        }
 
+        printf("%s", logo);
+        printf("O resultado da multiplicação é: %.1f\n", multiplicat);
+    }
+    else if (escolhaCalculo == 4) {
+        printf("%s", logo);
+        printf("* Digite quantos valores estão presentes no seu cálculo\n");
+        scanf("%d", &tamanho);
 
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* O valor é igual a %.2f\n\n", somat);
-		  printf ("* Digite 5 para voltar ao menu\n");
-		  scanf ("%d", &escolhaCalculo);
+        float valores_divisao[tamanho];
 
-		  break;
-		  
-		  
-		  
-		  
-		  
-		  
-		  // Subtração
-		  
-		  
-		  
-		  
-		  
-		case 2:
-		
-		
-		
-		
-		
-        //valor 1 da subtração		
-		
-		
-		
-		
-		
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o primeiro valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &A);
-		  
-		  
-		  
-		  
-		  
-		  //valor 2 da subtração
-		  
-		  
-		  
-		  
-		  
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o segundo valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &B);
+        for (i = 0; i < tamanho; i++) {
+            printf("%s", logo);
+            printf("* Digite o %dº valor do cálculo\n", i + 1);
+            scanf("%f", &valores_divisao[i]);
+            if (i == 0) {
+                dividirt = valores_divisao[i];
+            } else {
+                if (valores_divisao[i] != 0) {
+                    dividirt /= valores_divisao[i];
+                } else {
+                    printf("Erro: Divisão por zero\n");
+                    return 1;
+                }
+            }
+        }
 
+        printf("%s", logo);
+        printf("O resultado da divisão é: %.1f\n", dividirt);
+    }else if (escolhaCalculo == 0){
+        printf("%s", logo);
+        printf("* Obrigado por utilizar minha calculadora :D");
+    }else {
+        printf("%s", logo);
+        printf("Opção inválida. Por favor, escolha uma opção válida.\n");
+    }
 
-
-
-
-        //resultado da subtração
-        
-        
-        
-        
-        
-
-		  subtrat = A - B;
-
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* O valor é igual a %.2f\n\n", subtrat);
-		  printf ("* Digite 5 para voltar ao menu\n");
-		  scanf ("%d", &escolhaCalculo);
-		  break;
-		  
-		  
-		  //multiplicacao
-		  
-		  
-		case 3:
-		
-		
-		
-		// valor 1 da multplicacao
-		
-		
-		
-		
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o primeiro valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &A);
-		  
-		  
-		  
-		  //valor 2 da multiplicacao
-		  
-		  
-		  
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o segundo valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &B);
-
-
-
-
-
-        //resultado da multiplicacao
-
-
-    
-		  multiplicat = A * B;
-
-          printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* O valor é igual a %.2f\n\n", multiplicat);
-		  printf ("* Digite 5 para voltar ao menu\n");
-		  scanf ("%d", &escolhaCalculo);
-		  break;
-
-		  
-		  
-		  
-		  
-		  
-		  //divisao
-		  
-		  
-		  
-		  
-		  
-		case 4:
-		
-		
-		
-		
-		    // primeiro valor divisao
-		
-		
-		
-		
-		
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o primeiro valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &A);
-		  
-		  
-		  
-		  
-		  //segundo valor divisao
-		  
-		  
-		  
-		  
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite o segundo valor para o calculo\n");
-		  printf("* Atenção, utilize o ponto final para casas decimais\n");
-		  scanf ("%f", &B);
-
-
-            
-            
-            //resultado divisao
-
-
-
-
-
-		  dividirt = A / B;
-
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* O valor é igual a %.2f\n\n", dividirt);
-		  printf ("* Digite 5 para voltar ao menu\n");
-		  scanf ("%d", &escolhaCalculo);
-		  break;
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		default:
-		
-		
-		
-		
-		    // default
-		
-		
-		
-		
-		
-		  printf ("\n\n\n");
-		  printf
-			("          | |          | |         | |                     | |       | |            (_)      \n");
-		  printf
-			("  ___ __ _| | ___ _   _| | __ _  __| | ___  _ __ __ _    __| | ___   | |_ __ ___   ___ _ __  \n");
-		  printf
-			(" / __/ _` | |/ __| | | | |/ _` |/ _` |/ _ \\| '__/ _` |  / _` |/ _ \\  | __/ _` \\ \\ / / | '_ \\ \n");
-		  printf
-			("| (_| (_| | | (__| |_| | | (_| | (_| | (_) | | | (_| | | (_| | (_) | | || (_| |\ V /| | | | |\n");
-		  printf
-			(" \\___\\__,_|_|\\___|\\__,_|_|\\__,_|\\__,_|\\___/|_|  \\__,_|  \\__,_|\\___/   \\__\\__,_| \\_/ |_|_| |_|\n");
-		  printf
-			("\n---------------------------------------------------------------------------------------------\n");
-		  printf ("* Por favor digite uma escolha existente\n");
-		  scanf ("%d", &escolhaCalculo);
-		  
-		  
-		}
-		
-		
-				  
-		  
-		  
-		  
-		  
-		  //default
-		  
-		  
-		  
-		  
-		 
-
-
-
-
-	}
-
+    return 0;
 }
